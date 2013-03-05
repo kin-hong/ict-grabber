@@ -20,7 +20,7 @@ $(function() {
 			if (response) {
 				var parts = tab.url.split("/");
 				if (parts.length > 7 && response.issue && response.title) {
-					var issueCheckinTitle = "&lt;"+parts[7]+":"+response.issue+"&gt;"+response.title;
+					var issueCheckinTitle = "&lt;"+parts[7]+":#"+response.issue+"&gt;"+response.title;
 					$(".ict").html("The following has been copied to clipboard:<br/><br/>"+issueCheckinTitle);
 					copyToClipboard(issueCheckinTitle);
 				}
