@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Issue Commit Title Grabber",
+  "version": "1.0",
+  "description": "Constructs a title suitable for issue-related commits",
+  "icons": {
+    "16" : "images/icon-16.png",
+    "48" : "images/icon-64.png",
+    "128" : "images/icon-128.png"
+  },
+  "content_scripts": [ 
+    {
+      "matches": ["http://*.aquaclusters.com/*", "https://*.aquaclusters.com/*"],
+      "js": ["jquery.js", "content.js"]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "clipboardWrite", // for copy and cut
+    "clipboardRead" // for paste
+  ],
+  "browser_action": {
+    "default_icon": "images/icon-16.png",
+    "default_title": "ICT Grabber",
+    "default_popup": "popup.html"
+  }
+}
