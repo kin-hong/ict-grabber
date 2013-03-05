@@ -5,7 +5,7 @@ AquaClusters Issue Check-in Title Grabber
 
 This is a Chrome extension designed to construct an AquaClusters issue title in the form of:
 
-<project:#issue_number>issue_title
+&lt;project:#issue_number&gt;issue_title
 
 suitable to be used as a SVN check-in title. The above is then copied to the clipboard.
 
