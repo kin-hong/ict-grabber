@@ -19,8 +19,8 @@ $(function() {
 		chrome.tabs.sendMessage(tab.id, {action: "grabICT"}, function(response) {
 			if (response) {
 				var parts = tab.url.split("/");
-				if (parts.length > 9 && response.issue && response.title) {
-					var issueCheckinTitle = "&lt;"+parts[7]+":#"+parts[9]+"&gt;"+response.title;
+				if (parts.length > 7 && response.issue && response.title) {
+					var issueCheckinTitle = "&lt;"+parts[7]+":#"+response.issue+"&gt;"+response.title;
 					$(".ict").html("The following has been copied to clipboard:<br/><br/>"+issueCheckinTitle);
 					copyToClipboard(issueCheckinTitle);
 				}
